@@ -11,10 +11,5 @@
       "src": "/api/(.*)",
       "dest": "/api/$1"
     }
-  ],
-  "env": {
-    "AIRTABLE_BASE_ID": "@airtable_base_id",
-    "AIRTABLE_TABLE_NAME": "@airtable_table_name",
-    "AIRTABLE_ACCESS_TOKEN": "@airtable_access_token"
-  }
+  ]
 }
