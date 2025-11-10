@@ -1,43 +1,20 @@
-const API_URL =
-  window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1"
-    ? "http://localhost:3000/api/members"
-    : "/api/members";
+const baseId = "appL4pCxBSJ6H8dzd";
+const tableName = "Members";
+const token = "";
 
 const loader = document.getElementById("loader");
 
-console.log("Fetching from:", API_URL);
-console.log("Current hostname:", window.location.hostname);
-
-fetch(API_URL)
-  .then((res) => {
-    console.log("Response status:", res.status);
-    if (!res.ok) {
-      throw new Error(`Failed to fetch team members: ${res.status} ${res.statusText}`);
-    }
-    return res.json();
-  })
+fetch(`https://api.airtable.com/v0/${baseId}/${tableName}`, {
+  headers: { Authorization: `Bearer ${token}` },
+})
+  .then((res) => res.json())
   .then((data) => {
     const container = document.getElementById("records");
 
-    // Check if data is empty
-    if (!data.records || data.records.length === 0) {
-      loader.style.display = "none";
-      container.innerHTML = `
-        <div class="error-message">
-          <i class="fas fa-users-slash"></i>
-          <h3>No Team Members Found</h3>
-          <p>There are currently no team members to display.</p>
-        </div>
-      `;
-      return;
-    }
-
-    // Sort records by Member ID (numeric sort, removing "HCB" prefix)
     const sortedRecords = data.records.sort((a, b) => {
       let idA = a.fields["Member ID"];
       let idB = b.fields["Member ID"];
 
-      // Handle if it's an array or object
       if (Array.isArray(idA)) idA = idA[0];
       if (Array.isArray(idB)) idB = idB[0];
       if (typeof idA === "object") idA = JSON.stringify(idA);
@@ -88,35 +65,6 @@ fetch(API_URL)
   })
   .catch((error) => {
     console.error("Error fetching data:", error);
-    console.error("Error details:", error.message);
-
-    // Hide loader
+    // Hide loader even on error
     loader.style.display = "none";
-
-    // Show error screen
-    const errorScreen = document.getElementById("error-screen");
-    const container = document.getElementById("records");
-
-    if (errorScreen) {
-      // Update error screen with more details
-      const errorDetails = errorScreen.querySelector('.error-content p');
-      if (errorDetails) {
-        errorDetails.innerHTML = `
-          We couldn't load the team members. Error: <strong>${error.message}</strong><br><br>
-          This might be because:
-        `;
-      }
-      errorScreen.style.display = "flex";
-    } else {
-      // Fallback: show error in container
-      container.innerHTML = `
-        <div class="error-message">
-          <i class="fas fa-exclamation-triangle"></i>
-          <h3>Failed to Load Team Members</h3>
-          <p>Unable to connect to the server: ${error.message}</p>
-          <p style="font-size: 0.9rem; color: #999;">Make sure the backend server is running on port 3000</p>
-          <button onclick="location.reload()" class="btn btn-primary">Retry</button>
-        </div>
-      `;
-    }
   });
