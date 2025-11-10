@@ -1,6 +1,6 @@
-const baseId = "appL4pCxBSJ6H8dzd";
-const tableName = "Members";
-const token = "";
+const baseId = window.CONFIG.AIRTABLE_BASE_ID;
+const tableName = window.CONFIG.AIRTABLE_TABLE_NAME;
+const token = window.CONFIG.AIRTABLE_ACCESS_TOKEN;
 
 const loader = document.getElementById("loader");
 

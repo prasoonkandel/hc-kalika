@@ -10,8 +10,7 @@ dist/
 *.swp
 coverage/
 
-# Environment config files
-team/env.js
+
 
 /components/ApiExample.js
 /pages/api-example.js
@@ -24,4 +23,4 @@ qodana.yaml
 /.lingma/
 .windsurfrules
 
-/team/script.js
+/team/env.js
