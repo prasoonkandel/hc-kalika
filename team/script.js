@@ -67,4 +67,13 @@ fetch(`https://api.airtable.com/v0/${baseId}/${tableName}`, {
     console.error("Error fetching data:", error);
     // Hide loader even on error
     loader.style.display = "none";
+
+    // Show simple error message
+    const container = document.getElementById("records");
+    container.innerHTML = `
+      <div style="text-align: center; padding: 40px; width: 100%;">
+        <p style="color: #ec3750; font-size: 1.2rem;">⚠️ Failed to load team members</p>
+        <button onclick="location.reload()" style="margin-top: 20px; padding: 10px 20px; background: #ec3750; color: white; border: none; border-radius: 5px; cursor: pointer;">Retry</button>
+      </div>
+    `;
   });
