@@ -1,0 +1,6 @@
+window.CONFIG = {
+  AIRTABLE_BASE_ID: "appL4pCxBSJ6H8dzd",
+  AIRTABLE_TABLE_NAME: "Members",
+  AIRTABLE_ACCESS_TOKEN:
+    "patA4lpdtnIZARJZ0.134ae220e2855eaf5ca7a5225e7fdbcb4ea4b7e4df57e2adf9dfd59da7b75640",
+};
