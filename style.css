@@ -626,11 +626,14 @@ img {
   text-align: right;
   margin-top: 20px;
   font-size: 1rem;
-  color: var(--hack-red);
-  text-decoration: none;
+
   font-weight: 600;
   transition: var(--transition);
   margin-right: 50px;
+}
+.view-more a {
+  color: var(--hack-red);
+  text-decoration: none;
 }
 
 .right {
