@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="./Assets/hack.png" />
     <meta
       name="description"
@@ -26,83 +26,76 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Phantom+Sans:wght@700;900&display=swap"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
+    <nav class="navbar">
+      <div class="container">
         <div class="logo">
-          <img src="./Assets/hack.png" alt="Hackclub Logo" />
-          <span>HC Butwal Kalika</span>
+          <a href="#"
+            ><img src="./Assets/hack.png" alt="Hackclub Butwal Kalika Logo" />
+            HC Butwal Kalika</a
+          >
         </div>
-        <div class="nav-links" id="navLinks">
-          <button class="close-menu" id="closeMenu" aria-label="Close menu">
-            <i class="fas fa-times"></i>
-          </button>
+        <div class="nav-links" id="navLinks" aria-hidden="true">
+          <button
+            type="button"
+            class="fas fa-times"
+            id="closeMenu"
+            aria-label="Close menu"
+          ></button>
           <ul>
-            <li><a href="#home" class="nav-link">Home</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#events" class="nav-link">Events</a></li>
-            <li><a href="#team" class="nav-link">Team</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="./team/">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-        <button class="menu-toggle" id="menuIcon" aria-label="Open menu">
-          <i class="fas fa-bars"></i>
-        </button>
+        <button
+          type="button"
+          class="fas fa-bars"
+          id="menuIcon"
+          aria-label="Open menu"
+          aria-expanded="false"
+        ></button>
       </div>
     </nav>
 
-    <div class="overlay"></div>
-
     <!-- Hero Section -->
     <section class="hero" id="home">
-      <div class="hero-background"></div>
       <div class="container">
         <div class="hero-content">
-          <div class="badge">
-            <i class="fas fa-code"></i>
-            <span>By Teenagers, for teenagers</span>
-          </div>
-          <h1 class="hero-title">
-            The teenage <span class="gradient-text">coding club</span> in Butwal
+          <h1>
+            Welcome to <span class="hack-red">Hackclub</span> Butwal Kalika
           </h1>
-          <p class="hero-description">
-            Hack Club Butwal Kalika is a community of high school makers & student-led coding club. We meet weekly at Kalika School to build projects, learn together, and have fun.
-          </p>
+          <p>Club of Teenagers, Led by Teenagers in Butwal, Nepal</p>
           <div class="cta-buttons">
-            <a href="https://apply.hcbutwal.com" class="btn btn-primary btn-large">
-              Join the Club
-              <i class="fas fa-arrow-right"></i>
-            </a>
-            <a href="#about" class="btn btn-outline btn-large">
-              Learn More
-              <i class="fas fa-arrow-down"></i>
-            </a>
+            <a href="#about" class="btn btn-primary">Learn More</a>
+            <a href="#contact" class="btn btn-outline">Join Us</a>
           </div>
-          <div class="hero-stats">
-            <div class="stat-item">
-              <h3><span class="stat-number" data-target="40">0</span><span class="stat-suffix">+</span></h3>
-              <p>Active Members</p>
-            </div>
-            <div class="stat-item">
-              <h3><span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span></h3>
-              <p>Events Hosted</p>
-            </div>
-            <div class="stat-item">
-              <h3><span class="stat-number" data-target="20">0</span><span class="stat-suffix">+</span></h3>
-              <p>Projects Built</p>
-            </div>
-            <div class="stat-item">
-              <h3><span class="stat-number" data-target="70">0</span><span class="stat-suffix">%</span></h3>
-              <p>Student Led</p>
-            </div>
-          </div>
+        </div>
+        <div class="hero-image">
+          <img src="./Assets/friends.jpg" alt="Hackclub Orpheus Flag" />
         </div>
       </div>
     </section>
@@ -110,124 +103,90 @@
     <!-- About Section -->
     <section class="about" id="about">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">
-            Why <span class="gradient-text">Hack Club</span> Butwal Kalika?
-          </h2>
-          <p class="section-subtitle">
-            We're not just another coding club. We're a movement of teenage hackers changing Butwal.
-          </p>
-        </div>
-        <div class="features-grid">
-          <div class="feature-card" data-aos="fade-up">
-            <div class="feature-icon gradient-bg-1">
-              <i class="fas fa-code"></i>
-            </div>
-            <h3>Learn by Building</h3>
+        <h2 class="section-title">About <span class="hack-red">Us</span></h2>
+        <div class="about-content">
+          <div class="about-text">
             <p>
-              Skip boring tutorials. Build real projects with support from fellow hackers in your school.
+              Hackclub Butwal Kalika is a student-led coding club affiliated
+              with the international Hackclub network. We're on a mission to
+              encourage high school students studying in Kalika Manavgyan
+              Secondary School, Butwal, Nepal.
+            </p>
+            <p>
+              Through workshops, events, and community activities, we empower
+              students to build projects, learn new technologies, and
+              collaborate with each other.
+            </p>
+            <p>
+              Join us to learn, build, and share your creative ideas in a
+              supportive community!
             </p>
           </div>
-          <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="feature-icon gradient-bg-2">
-              <i class="fas fa-users"></i>
+          <div class="about-stats">
+            <div class="stat">
+              <h3>40+</h3>
+              <p>Members</p>
             </div>
-            <h3>Join a Community</h3>
-            <p>
-              Connect with passionate makers. Share ideas, get feedback, and collaborate on exciting projects.
-            </p>
-          </div>
-          <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="feature-icon gradient-bg-3">
-              <i class="fas fa-rocket"></i>
+            <div class="stat">
+              <h3>5+</h3>
+              <p>Events</p>
             </div>
-            <h3>Ship Fast</h3>
-            <p>
-              From idea to deployed product in days. Get resources and mentorship to bring your vision to life.
-            </p>
-          </div>
-          <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="feature-icon gradient-bg-4">
-              <i class="fas fa-globe"></i>
+            <div class="stat">
+              <h3>20+</h3>
+              <p>Projects</p>
             </div>
-            <h3>Global Network</h3>
-            <p>
-              Part of the international Hack Club network with access to events, workshops, and opportunities.
-            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Events Section -->
+    <!-- Events Section with Owl Carousel -->
     <section class="events" id="events">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">
-            Our <span class="gradient-text">Events</span>
-          </h2>
-          <p class="section-subtitle">
-            From workshops to hackathons, we're always building something amazing together.
-          </p>
-        </div>
-        <div class="events-grid">
-          <div class="event-card" data-aos="zoom-in">
-            <div class="event-image">
-              <img src="./Assets/git-github.jpg" alt="Git and GitHub Workshop" />
-              <div class="event-badge">Workshop</div>
-            </div>
-            <div class="event-content">
-              <div class="event-meta">
-                <span class="event-date"><i class="fas fa-calendar"></i> June 2025</span>
+        <h2 class="section-title">Our <span class="hack-red">Events</span></h2>
+        <div class="owl-carousel event-carousel owl-theme">
+          <div class="event-item">
+            <div class="event-card">
+              <div class="event-image">
+                <img src="./Assets/git-github.jpg" alt="Event" />
               </div>
-              <h3>Git and GitHub Workshop</h3>
-              <p>
-                Master version control and collaboration. Learn how professional developers manage code and work in teams.
-              </p>
-              <div class="event-tags">
-                <span class="tag">Git</span>
-                <span class="tag">GitHub</span>
-                <span class="tag">Version Control</span>
+              <div class="event-content">
+                <h3>Git and GitHub Workshop</h3>
+                <p class="event-date">June 2025</p>
+                <p>
+                  A workshop on Git and GitHub to help members understand
+                  version control and collaboration.
+                </p>
               </div>
             </div>
           </div>
-          <div class="event-card" data-aos="zoom-in" data-aos-delay="100">
-            <div class="event-image">
-              <img src="./Assets/boba-drops.jpg" alt="BOBA Drops" />
-              <div class="event-badge">Social</div>
-            </div>
-            <div class="event-content">
-              <div class="event-meta">
-                <span class="event-date"><i class="fas fa-calendar"></i> September 2025</span>
+          <div class="event-item">
+            <div class="event-card">
+              <div class="event-image">
+                <img src="./Assets/boba-drops.jpg" alt="Event" />
               </div>
-              <h3>BOBA Drops</h3>
-              <p>
-                Build beautiful websites with HTML and CSS, then celebrate with boba drinks. Code, create, and connect!
-              </p>
-              <div class="event-tags">
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-                <span class="tag">Web Design</span>
+              <div class="event-content">
+                <h3>BOBA Drops</h3>
+                <p class="event-date">September 2025</p>
+                <p>
+                  BOBA Drops event where we built sites using HTML and CSS and
+                  got some boba to celebrate!
+                </p>
               </div>
             </div>
           </div>
-          <div class="event-card" data-aos="zoom-in" data-aos-delay="200">
-            <div class="event-image">
-              <img src="./Assets/app-development.jpg" alt="APP Dev Workshop" />
-              <div class="event-badge">Workshop</div>
-            </div>
-            <div class="event-content">
-              <div class="event-meta">
-                <span class="event-date"><i class="fas fa-calendar"></i> July 2025</span>
+          <div class="event-item">
+            <div class="event-card">
+              <div class="event-image">
+                <img src="./Assets/app-development.jpg" alt="Event" />
               </div>
-              <h3>APP Dev Workshop</h3>
-              <p>
-                Dive into mobile app development. Design and build your first mobile app from scratch with expert guidance.
-              </p>
-              <div class="event-tags">
-                <span class="tag">Mobile</span>
-                <span class="tag">App Dev</span>
-                <span class="tag">UI/UX</span>
+              <div class="event-content">
+                <h3>APP Dev Workshop</h3>
+                <p class="event-date">July 2025</p>
+                <p>
+                  A workshop on APP Development to help members understand
+                  mobile app design and development.
+                </p>
               </div>
             </div>
           </div>
@@ -238,206 +197,67 @@
     <!-- Team Section -->
     <section class="team" id="team">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">
-            Meet Our <span class="gradient-text">Team</span>
-          </h2>
-          <p class="section-subtitle">
-            Led by Teenagers, for Teenagers. Meet the people making it all happen.
-          </p>
-        </div>
-        
-        <div class="team-grid">
-          <!-- Team Member 1 -->
-          <div class="team-card" data-aos="fade-up">
-            <div class="team-image">
+        <h2 class="section-title">Our <span class="hack-red">Team</span></h2>
+        <div class="team-members">
+          <div class="team-member">
+            <div class="member-image">
               <img src="./BOD/leader.jpg" alt="Prasoon Kandel" />
-              <div class="team-overlay">
-                <div class="social-links">
-                  <a href="https://github.com/prasoonkandel" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="https://x.com/PrasoonKandel" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </div>
-              </div>
             </div>
-            <div class="team-info">
-              <h3>Prasoon Kandel</h3>
-              <p class="team-role">Lead</p>
+            <h3>Prasoon Kandel</h3>
+            <p class="member-role">Lead</p>
+            <div class="social-links">
+              <a href="https://github.com/prasoonkandel" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://x.com/PrasoonKandel" target="_blank"
+                ><i class="fab fa-twitter"></i
+              ></a>
             </div>
           </div>
-
-          <!-- Team Member 2 -->
-          <div class="team-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="team-image">
-              <img src="./BOD/prashanta.jpg" alt="Prashanta Bhusal" />
-              <div class="team-overlay">
-                <div class="social-links">
-                  <a href="https://github.com/prashanta065" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="https://www.instagram.com/prashanta065/" target="_blank" aria-label="Instagram">
-                   <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
-              </div>
+          <div class="team-member">
+            <div class="member-image">
+              <img src="./BOD/prashanta.jpg" alt="Prashant Bhusal" />
             </div>
-            <div class="team-info">
-              <h3>Prashanta Bhusal</h3>
-              <p class="team-role">Co-Lead</p>
+            <h3>Prashanta Bhusal</h3>
+            <p class="member-role">Co-Lead</p>
+            <div class="social-links">
+              <a href="https://github.com/prashanta065" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
           </div>
-
-          <!-- Team Member 3 -->
-          <div class="team-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="team-image">
+          <div class="team-member">
+            <div class="member-image">
               <img src="./BOD/haddi.jpg" alt="Pratik Chalise" />
-              <div class="team-overlay">
-                <div class="social-links">
-                  <a href="https://github.com/pratiksuii7" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </div>
-              </div>
             </div>
-            <div class="team-info">
-              <h3>Pratik Chalise</h3>
-              <p class="team-role">Secretary</p>
+            <h3>Pratik Chalise</h3>
+            <p class="member-role">Secretary</p>
+            <div class="social-links">
+              <a href="https://github.com/pratiksuii7" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
           </div>
 
-          <!-- Team Member 4 -->
-          <div class="team-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="team-image">
+          <div class="team-member">
+            <div class="member-image">
               <img src="./BOD/salisha7.jpg" alt="Salisha Bhusal" />
-              <div class="team-overlay">
-                <div class="social-links">
-                  <a href="https://github.com/Salisha48" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#" target="_blank" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                </div>
-              </div>
             </div>
-            <div class="team-info">
-              <h3>Salisha Bhusal</h3>
-              <p class="team-role">Design Lead</p>
+            <h3>Salisha Bhusal</h3>
+            <p class="member-role">Design Lead</p>
+            <div class="social-links">
+              <a href="https://github.com/Salisha48" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
             </div>
           </div>
-        </div>
-
-        <div class="view-more-section">
-          <a href="./team/id.html" class="btn btn-outline">
-            View All Team Members
-            <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Supporters & Mentors Section -->
-    <section class="supporters-mentors" id="supporters">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">
-            Our <span class="gradient-text">Supporters</span> & Mentors
-          </h2>
-          <p class="section-subtitle">
-            Amazing people and organizations helping us grow and succeed.
-          </p>
-        </div>
-        
-        <div class="supporters-mentors-grid">
-          <!-- Mentor 1 -->
-          <div class="sm-card" data-aos="fade-up">
-            <div class="sm-image">
-              <img src="./mentors/mentor.jpg" alt="Kamal Gyawali" />
-              <div class="sm-overlay">
-                <div class="social-links">
-                  <a href="https://www.facebook.com/kamal.gnawali.2025" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-facebook"></i>
-                  </a>
-                  <a href="#" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="sm-info">
-              <h3>Kamal Gyawali</h3>
-              <p class="sm-role">Mentor</p>
-            </div>
-          </div>
-
-          <!-- Mentor 2 -->
-          <div class="sm-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="sm-image">
-              <img src="./mentors/mentor2.jpg" alt="Hemanta Ghimire" />
-              <div class="sm-overlay">
-                <div class="social-links">
-                  <a href="https://www.facebook.com/hemanta.ghimire.442932" target="_blank" aria-label="LinkedIn">
-                    <i class="fab fa-facebook"></i>
-                  </a>
-                  <a href="https://www.instagram.com/hemanta_ghimire?igsh=MWF6bDZkZWc2cXljMw==" target="_blank" aria-label="GitHub">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="sm-info">
-              <h3>Hemanta Ghimire</h3>
-              <p class="sm-role">Mentor</p>
-            </div>
-          </div>
-
-          <!-- Supporter -->
-          <div class="sm-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="sm-image">
-              <img src="./mentors/supporter.jpg" alt="Printed Cat" class="supporter-logo" />
-              <div class="sm-overlay">
-                <div class="social-links">
-                  <a href="https://www.tiktok.com/@itsprintedcat" target="_blank" aria-label="TikTok">
-                    <i class="fab fa-tiktok"></i>
-                  </a>
-                  <a href="https://www.facebook.com/printedcat7" target="_blank" aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="sm-info">
-              <h3>Printed Cat</h3>
-              <p class="sm-role">Printing Partner</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section" id="join">
-      <div class="container">
-        <div class="cta-content" data-aos="zoom-in">
-          <h2>Ready to Start Building?</h2>
-          <p>
-            Join Hackclub Butwal Kalika and become part of a community of teenage makers learning to code and shipping amazing projects.
-          </p>
-          <div class="cta-buttons">
-            <a href="https://apply.hcbutwal.com" class="btn btn-primary btn-large">
-              Join Now
-              <i class="fas fa-arrow-right"></i>
-            </a>
-            <a href="https://hackclub.slack.com/archives/C08TFQJ4TL7" target="_blank" class="btn btn-outline btn-large">
-              Join Our Slack
-            </a>
-          </div>
+          <span class="right">
+            <span class="view-more"> <a href="./team/">view more</a></span>
+          </span>
         </div>
       </div>
     </section>
@@ -445,95 +265,55 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">
-            Get in <span class="gradient-text">Touch</span>
-          </h2>
-          <p class="section-subtitle">
-            Have questions? Want to join? We'd love to hear from you!
-          </p>
-        </div>
-        <div class="contact-wrapper">
-          <div class="contact-info" data-aos="fade-right">
-            <div class="contact-info-header">
-              <h3>Contact Information</h3>
-              <p>Feel free to reach out through any of these channels</p>
-            </div>
-            <div class="contact-items-list">
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-envelope"></i>
-                </div>
-                <div class="contact-details">
-                  <h4>Email Address</h4>
-                  <a href="mailto:contact@hcbutwal.com">contact@hcbutwal.com</a>
-                </div>
+        <h2 class="section-title">
+          Get in <span class="hack-red">Touch</span>
+        </h2>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-items">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+                <i class="fas fa-map-marker-alt"></i>
               </div>
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <div class="contact-details">
-                  <h4>Our Location</h4>
-                  <p>Kalika Manavgyan School<br>Butwal-10 Kalikanagar, Nepal</p>
-                </div>
-              </div>
-              <div class="contact-item">
-                <div class="contact-icon">
-                  <i class="fas fa-clock"></i>
-                </div>
-                <div class="contact-details">
-                  <h4>Meeting Hours</h4>
-                  <p>Every Friday<br>3:00 PM - 5:00 PM</p>
-                </div>
+              <div class="contact-details">
+                <p>contact@hcbutwal.com</p>
+                <p>Butwal, Nepal</p>
               </div>
             </div>
-            <div class="social-links-large">
-              <a href="https://www.instagram.com/hckalika/" target="_blank" aria-label="Instagram" class="social-link-item">
-                <i class="fab fa-instagram"></i>
-                <span>Instagram</span>
-              </a>
-              <a href="https://discord.gg/fRDaaGGJ" target="_blank" aria-label="Discord" class="social-link-item">
-                <i class="fab fa-discord"></i>
-                <span>Discord</span>
-              </a>
-              <a href="https://github.com/Hackclub-Kalika" target="_blank" aria-label="GitHub" class="social-link-item">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-              </a>
-              <a href="https://hackclub.slack.com/archives/C08TFQJ4TL7" target="_blank" aria-label="Slack" class="social-link-item">
-                <i class="fab fa-slack"></i>
-                <span>Slack</span>
-              </a>
+            <div class="social-links">
+              <a href="https://www.instagram.com/hckalika/" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="https://discord.gg/fRDaaGGJ" target="_blank"
+                ><i class="fab fa-discord"></i
+              ></a>
+              <a href="https://github.com/Hackclub-Kalika" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
             </div>
+            <img src="./Assets/left.png" alt="" />
           </div>
-          <div class="contact-form-wrapper" data-aos="fade-left">
-            <div class="form-header">
-              <h3>Send us a Message</h3>
-              <p>We'll get back to you within 24 hours</p>
-            </div>
-            <form class="contact-form" id="contactForm">
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Full Name <span class="required">*</span></label>
-                  <input type="text" id="name" name="name" required placeholder="Hacker's Name" />
-                </div>
-                <div class="form-group">
-                  <label for="email">Email Address <span class="required">*</span></label>
-                  <input type="email" id="email" name="email" required placeholder="hcbk@gmail.com" />
-                </div>
+          <div class="contact-form">
+            <form action="#" method="POST">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
               </div>
               <div class="form-group">
-                <label for="subject">Subject <span class="required">*</span></label>
-                <input type="text" id="subject" name="subject" required placeholder="What is this regarding?" />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
               </div>
               <div class="form-group">
-                <label for="message">Message <span class="required">*</span></label>
-                <textarea id="message" name="message" rows="6" required placeholder="Tell us what you're thinking..."></textarea>
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-block">
-                <span>Send Message</span>
-                <i class="fas fa-paper-plane"></i>
+              <button type="submit" class="btn btn-primary">
+                Send Message
               </button>
             </form>
           </div>
@@ -545,81 +325,61 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
-          <div class="footer-brand">
-            <div class="footer-logo">
-              <img src="./Assets/hack.png" alt="Hackclub Logo" />
-              <span>HC Butwal Kalika</span>
-            </div>
-            <p class="footer-description">
-              A student-led coding club affiliated with Hack Club, empowering teenagers in Butwal, Nepal to learn, build, and ship amazing projects.
-            </p>
-            <div class="footer-social">
-              <a href="https://www.instagram.com/hckalika/" target="_blank" aria-label="Instagram" title="Follow us on Instagram">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://discord.gg/fRDaaGGJ" target="_blank" aria-label="Discord" title="Join our Discord">
-                <i class="fab fa-discord"></i>
-              </a>
-              <a href="https://github.com/Hackclub-Kalika" target="_blank" aria-label="GitHub" title="View our GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://hackclub.slack.com/archives/C08TFQJ4TL7" target="_blank" aria-label="Slack" title="Join our Slack">
-                <i class="fab fa-slack"></i>
-              </a>
-            </div>
+          <div class="footer-logo">
+            <img
+              src="https://assets.hackclub.com/flag-orpheus-top.svg"
+              alt="Hackclub Butwal Kalika Logo"
+            />
+            <p>Hackclub Butwal Kalika</p>
           </div>
           <div class="footer-links">
             <div class="footer-column">
-              <h4>Navigation</h4>
+              <h3>Resources</h3>
               <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#events">Events</a>
-                </li><li><a href="/team/id.html">Our Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>Resources</h4>
-              <ul>
-                <li><a href="https://hackclub.com" target="_blank">Hack Club HQ</a></li>
-                <li><a href="https://workshops.hackclub.com" target="_blank">Workshops</a></li>
-                <li><a href="https://hackclub.com/slack" target="_blank">Slack Community</a></li>
-                <li><a href="https://kalikaschoolbtl.edu.np/" target="_blank">School Website</a></li>
-              </ul>
-            </div>
-            <div class="footer-column">
-              <h4>Get Involved</h4>
-              <ul>
-                <li><a href="https://apply.hcbutwal.com">Join the Club</a></li>
-                <li><a href="https://hackclub.slack.com/archives/C08TFQJ4TL7" target="_blank">Slack Channel</a></li>
-                <li><a href="https://github.com/Hackclub-Kalika" target="_blank">Contribute</a></li>
-                <li><a href="#contact">Partner With Us</a></li>
+                <li>
+                  <a href="https://hackclub.com" target="_blank">Hackclub</a>
+                </li>
+                <li>
+                  <a href="https://workshops.hackclub.com" target="_blank"
+                    >Workshops</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://hackclub.slack.com/archives/C08TFQJ4TL7"
+                    target="_blank"
+                    >Join Slack</a
+                  >
+                </li>
+                <li>
+                  <a href="https://kalikaschoolbtl.edu.np/" target="_blank"
+                    >School Site</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="footer-divider"></div>
         <div class="footer-bottom">
-          <div class="footer-bottom-left">
-            <p>&copy; 2025 Hackclub Butwal Kalika. All rights reserved.</p>
-            <p class="footer-affiliation">A Hack Club 501(c)(3) nonprofit affiliate</p>
-          </div>
-          <div class="footer-bottom-right">
-            <p class="footer-made-with">
-              Affiliated </i> by  Kalika Manavgyan Secondary School
-            </p>
-          </div>
+          <p>
+            &copy;2025 Hackclub Butwal Kalika — A Hack Club 501(c)(3) affiliate.
+          </p>
+          <p>Club run by students of Kalika Manavgyan Secondary School.</p>
         </div>
       </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
     <!-- Scripts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
