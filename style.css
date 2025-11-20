@@ -382,18 +382,21 @@ img {
 }
 
 /* Team Section */
-.team {
+.team,
+.mentors {
   background-color: var(--hack-white);
 }
 
-.team-members {
+.team-members,
+.mentors-members {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
 }
 
-.team-member {
+.team-member,
+.mentors-member {
   width: 250px;
   background-color: var(--hack-light);
   border-radius: 10px;
@@ -403,8 +406,9 @@ img {
   transition: var(--transition);
 }
 
-.team-member:hover {
-  transform: translateY(-10px);
+.team-member:hover,
+.mentors-member:hover {
+  cursor: pointer;
 }
 
 .member-image {
@@ -422,7 +426,8 @@ img {
   object-fit: cover;
 }
 
-.team-member h3 {
+.team-member,
+.mentors-member h3 {
   font-size: 1.3rem;
   margin-bottom: 5px;
   color: var(--hack-dark);
