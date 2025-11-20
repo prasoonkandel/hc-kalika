@@ -1,0 +1,206 @@
+/* Team Section */
+.team {
+  padding: 6rem 0;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 1rem 0;
+  max-width: 100%;
+}
+
+/* Team Member Cards - Updated for consistency */
+.team-member,
+.team-card {
+  background: var(--secondary-dark);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  text-align: center;
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.team-member:hover,
+.team-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 60, 65, 0.3);
+  box-shadow: 0 8px 30px rgba(255, 60, 65, 0.15);
+  background: var(--secondary-dark);
+}
+
+/* Team Member Images - Ensure all are circular */
+.member-image,
+.team-image {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%; /* Circular shape */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.member-image img,
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* Ensure image content is also circular */
+  transition: transform 0.5s ease;
+}
+
+.team-member:hover .member-image,
+.team-card:hover .team-image {
+  transform: scale(1.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.team-member:hover .member-image img,
+.team-card:hover .team-image img {
+  transform: scale(1.1);
+}
+
+/* Team Overlay for Social Links */
+.member-overlay,
+.team-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(255, 60, 65, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.team-member:hover .member-overlay,
+.team-card:hover .team-overlay {
+  opacity: 1;
+}
+
+/* Team Info */
+.member-info,
+.team-info {
+  margin-top: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.member-info h3,
+.team-name {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.member-role,
+.team-role {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Social Links in Overlay */
+.member-overlay .social-links,
+.team-overlay .social-links {
+  display: flex;
+  gap: 0.8rem;
+  z-index: 2;
+  justify-content: center;
+}
+
+.member-overlay .social-links a,
+.team-overlay .social-links a {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  font-size: 1.2rem;
+}
+
+.member-overlay .social-links a:hover,
+.team-overlay .social-links a:hover {
+  background: white;
+  color: var(--primary-red);
+  transform: scale(1.15);
+  border-color: white;
+  text-decoration: none !important;
+}
+
+/* Responsive Adjustments for Team Section */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .member-image,
+  .team-image {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0;
+  }
+  .member-image,
+  .team-image {
+    width: 160px;
+    height: 160px;
+  }
+  .member-overlay .social-links a,
+  .team-overlay .social-links a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+  .member-info h3,
+  .team-name {
+    font-size: 1.2rem;
+  }
+  .member-role,
+  .team-role {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 10px;
+  }
+  .member-image,
+  .team-image {
+    width: 180px;
+    height: 180px;
+  }
+  .team-member,
+  .team-card {
+    max-width: 100%;
+  }
+}

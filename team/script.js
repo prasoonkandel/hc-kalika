@@ -4,6 +4,43 @@ const token = window.CONFIG.AIRTABLE_ACCESS_TOKEN;
 
 const loader = document.getElementById("loader");
 
+// Theme Manager - Same as main site
+const ThemeManager = {
+  init() {
+    this.applySystemTheme();
+    this.watchSystemTheme();
+  },
+
+  applySystemTheme() {
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = isDark ? 'dark' : 'light';
+    
+    document.documentElement.setAttribute('data-theme', theme);
+    document.body.classList.remove('dark-theme', 'light-theme');
+    document.body.classList.add(`${theme}-theme`);
+    
+    // Update theme color meta tag dynamically
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', isDark ? '#1a1a1a' : '#ffffff');
+    }
+    
+    console.log(`🎨 Theme applied: ${theme}`);
+  },
+
+  watchSystemTheme() {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    
+    // Listen for theme changes
+    mediaQuery.addEventListener('change', () => {
+      this.applySystemTheme();
+    });
+  }
+};
+
+// Initialize theme immediately
+ThemeManager.init();
+
 fetch(`https://api.airtable.com/v0/${baseId}/${tableName}`, {
   headers: { Authorization: `Bearer ${token}` },
 })
@@ -77,3 +114,64 @@ fetch(`https://api.airtable.com/v0/${baseId}/${tableName}`, {
       </div>
     `;
   });
+
+// Mobile Navigation
+const menuToggle = document.getElementById('menuIcon');
+const closeMenu = document.getElementById('closeMenu');
+const navLinks = document.getElementById('navLinks');
+const overlay = document.querySelector('.overlay');
+const body = document.body;
+
+// Open mobile menu
+if (menuToggle) {
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.add('active');
+    overlay.classList.add('active');
+    body.style.overflow = 'hidden';
+  });
+}
+
+// Close mobile menu
+if (closeMenu) {
+  closeMenu.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+    body.style.overflow = '';
+  });
+}
+
+// Close menu when clicking overlay
+if (overlay) {
+  overlay.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+    body.style.overflow = '';
+  });
+}
+
+// Close menu when clicking nav links
+const navLinkItems = document.querySelectorAll('.nav-link');
+navLinkItems.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+    body.style.overflow = '';
+  });
+});
+
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+if (navbar) {
+  // Add scrolled class on page load if already scrolled
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  }
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+}
